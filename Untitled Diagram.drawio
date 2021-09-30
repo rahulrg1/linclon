@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-30T15:20:43.882Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="9YpndSXzAiWOlZWUQTJf" version="15.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-30T16:05:51.263Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="UIhdLhXF0xof1N6NhMjb" version="15.3.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1736" dy="964" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="#283618" math="0" shadow="0">
       <root>
@@ -75,8 +75,13 @@
             <mxPoint x="320" y="710" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="eBmody1IOq-LgtZGV7bU-39" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FEFAE0;strokeColor=#DDA15E;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="LcvHuHoWbDxBW1VOArnz-36" target="eBmody1IOq-LgtZGV7bU-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585.0000000000002" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="LcvHuHoWbDxBW1VOArnz-36" value="LANDING PAGE" style="whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;fontColor=#FEFAE0;strokeColor=#DDA15E;fillColor=#BC6C25;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="230" y="340" width="130" height="110" as="geometry" />
+          <mxGeometry x="210" y="335" width="150" height="135" as="geometry" />
         </mxCell>
         <mxCell id="LcvHuHoWbDxBW1VOArnz-37" value="no&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;hachureGap=4;pointerEvents=0;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="565" y="375" width="40" height="20" as="geometry" />
@@ -191,6 +196,9 @@
         </mxCell>
         <mxCell id="eBmody1IOq-LgtZGV7bU-28" value="yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="675" y="750" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="eBmody1IOq-LgtZGV7bU-40" value="contents of landing page :&lt;br&gt;most skills searched,&lt;br&gt;options of ordinary skills eg.blockchain,&lt;br&gt;etc.&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;rounded=0;sketch=0;fontColor=#FEFAE0;strokeColor=#DDA15E;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="880" width="150" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
