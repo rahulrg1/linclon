@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 
 //modules
-import Nav from "../modules/nav.js";
-import Home from "../modules/landing.js";
+import Nav from "../modules/nav";
+import Home from "../modules/landing";
 import Error from "../modules/error";
-import Profile from "../modules/profile.js";
+import Profile from "../modules/profile";
 
 const App = () => {
   return (

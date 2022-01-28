@@ -8,28 +8,24 @@ import search from "../assets/images/314807_search_icon.png";
 import GitHub from "../assets/images/GitHub-Mark.png";
 import Linclon from "../assets/images/Capture.JPG";
 
-let themeChange = 1;
-let theme = () => {
-  if (themeChange === 1) {
-    document.documentElement.classList.add("dark");
-    document.body.style.backgroundImage = "conic-gradient(black, grey,rgb(50,50,50) )";
-    //"linear-gradient(rgb(20,20,20),rgb(100,100,100))";
-    themeChange -= 1;
-  } else {
-    document.documentElement.classList.remove("dark");
-    document.body.style.backgroundImage = "linear-gradient(rgb(192,192,192),rgb(192,192,192))";
-    //"linear-gradient(rgb(254, 255, 213),rgb(195,195,195))";
-    themeChange += 1;
-  }
-};
-const Nav = () => {
-  
-  const [changeTheme, setChangeTheme] = useState(false);
-  let call = () => {
-    if(changeTheme===true)
-    setChangeTheme(false);
-    else
-    setChangeTheme(true);
+
+  const Nav = () => {
+    
+    const [themeIcon, setThemeIcon] = useState(false);
+    let themeChange = () => {
+      if(themeIcon)
+      {
+        setThemeIcon(false);
+        document.documentElement.classList.remove("dark");
+        document.body.style.backgroundImage = "linear-gradient(rgb(192,192,192),rgb(192,192,192))";
+        //"linear-gradient(rgb(254, 255, 213),rgb(195,195,195))";
+      }
+      else
+      { setThemeIcon(true);
+      document.documentElement.classList.add("dark");
+      document.body.style.backgroundImage = "conic-gradient(black, grey,rgb(50,50,50) )";
+      //"linear-gradient(rgb(20,20,20),rgb(100,100,100))";
+      }
   };
 
   const navigation = [
@@ -49,12 +45,15 @@ const Nav = () => {
   let modal=document.getElementById('modalId');
   window.onclick=function(event){
     if(event.target === modal)
-   modal.style.display="none";
+    {
+     modal.style.display="none";
+     isSignInModal(false);
+    }
   }
   return (
     <>
       {/* signIn Modal */}
-      <div id="modalId" style={signInModal?{}:{display:"none"}} className="h-[100%] w-[100%] fixed bg-[rgba(0,0,0,0.6)]">
+      <div id="modalId" style={signInModal?{}:{display:"none"}} className="z-[10] mt-[3.25rem] h-[100%] w-[100%] fixed bg-[rgba(0,0,0,0.6)]">
       <section className="relative font-bold rounded-[.5rem] max-w-[25rem] mx-auto mt-[5rem] bg-white dark:bg-black dark:text-white text-lg">
           <span onClick={isSignInModal} className=" dark:text-white absolute right-2 cursor-pointer">
             &times;
@@ -73,7 +72,7 @@ const Nav = () => {
           <label className="mx-auto">Email :</label>
           <input type="email" placeholder="email@gmail.com" className="rounded-[.5rem] text-black border-2 px-2" required/>
           <a href="/" className="mr-32 hover:text-green-900">forget email?</a>
-          <submit type="submit" className="mx-auto bg-blue-700 py-1 px-2 hover:text-black cursor-pointer text-white rounded-md">
+          <submit type="submit" className="mx-auto bg-cyan-500 py-1 px-2 hover:text-black cursor-pointer text-white rounded-md">
             Sign In
           </submit>
         </section>
@@ -83,12 +82,10 @@ const Nav = () => {
       </section>
       </div>
      {/*Modal end */}
-      {/* <article className="bg-white">
-      </article> */}
 
-      <nav className="rounded-full bg-gradient-to-r from-cyan-500 via-pink-500 to-purple-700 py-2 xs:overflow-auto ">
+      <nav className="rounded-full bg-gradient-to-r from-cyan-500 to-violet-700 py-2 xs:overflow-auto ">
         <ul className="flex flex-row font-bold gap-6 text-xl ">
-      <img src={Linclon} className="rounded-full block xs:w-[100px] md:w-[150px] animate-pulse" height="50px"></img>
+      <img src={Linclon} alt="" className="rounded-full block xs:w-[100px] md:w-[150px] animate-pulse" height="50px"></img>
           {/* <span className="ml-2"></span> */}
           {navigation.map(([path, name]) => {
             return (
@@ -109,11 +106,10 @@ const Nav = () => {
           <li className=" dark:hover:text-slate-900 dark:text-white mx-auto py-1 hover:rounded-[.2em] ">
             <button onClick={isSignInModal} className="font-bold">SignIn</button>
           </li>
-          <article onClick={() => { theme();}} className="cursor-pointer shrink-0 mx-auto">
+          <article onClick={themeChange} className="cursor-pointer shrink-0 mx-auto">
             <img
-              src={changeTheme?sun:moon}
+              src={themeIcon?sun:moon}
               alt=""
-              onClick={call}
               height="25px"
               width="30px"
               className="animate-bounce"
