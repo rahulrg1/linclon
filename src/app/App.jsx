@@ -1,7 +1,13 @@
+import Feature from "../components/Feature";
+import Landing from "../components/landing";
+import Example from "../components/navbar";
+
 export default function App() {
    return (
-      <h1 className="text-3xl font-bold underline text-blue-400 ">
-         Hello world!
-      </h1>
+      <>
+         <Example />
+         <Landing />
+         <Feature />
+      </>
    );
 }
