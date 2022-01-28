@@ -1,13 +1,12 @@
-import Feature from "../components/Feature";
-import Landing from "../components/landing";
-import Example from "../components/navbar";
+import Navbar from "../components/Navbar";
 
-export default function App() {
+const App = () => {
    return (
       <>
-         <Example />
-         <Landing />
-         <Feature />
+         <Navbar />
+         <div className="bg-indigo-600 w-full h-screen"></div>
       </>
    );
-}
+};
+
+export default App;
