@@ -6,17 +6,17 @@ import {
 } from "react-router-dom";
 
 //modules
-import Nav from "../modules/nav.js";
-import Home from "../modules/landing.js";
+import Nav from "../modules/nav";
+import Home from "../modules/landing";
 import Error from "../modules/error";
-import Profile from "../modules/profile.js";
+import Profile from "../modules/profile";
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Nav/>}>
-          <Route path="/home" element={<Home/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Error/>} />
 
