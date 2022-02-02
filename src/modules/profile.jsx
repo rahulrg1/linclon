@@ -12,7 +12,7 @@ const Profile = () => {
   }
   return (
     <>
-    <div className="mx-[5%] my-[2rem] rounded-lg bg-gradient-to-r from-violet-900 to-gray-900 dark:bg-gradient-to-r dark:from-black dark:to-gray-900">
+    <div className="mx-[5%] my-[2rem] rounded-lg bg-neutral-100 dark:bg-gradient-to-r dark:from-black dark:to-gray-900">
       <div className="flex xs:flex-col md:flex-row dark:text-white mx-[2rem] pb-[5rem] gap-10 font-bold">
         <section className="flex flex-col items-end my-10 basis-[30%] shrink-0 xs:mx-auto md:mx-0" >
           <img src={Avatar} alt="avatar" height="200px" width="200px" className="border-2 border-black rounded-full"/>

@@ -83,13 +83,13 @@ import Linclon from "../assets/images/Capture.JPG";
       </div>
      {/*Modal end */}
 
-      <nav id="navTop" className="rounded-full bg-gradient-to-r from-cyan-500 via-violet-900 to-violet-900 py-2 xs:overflow-auto ">
-        <ul className="flex flex-row font-bold gap-6 text-xl ">
-      <img src={Linclon} alt="" className="rounded-full block xs:w-[100px] md:w-[150px] animate-pulse" height="50px"></img>
+      <nav id="navTop" className="text-white rounded-full bg-gradient-to-r from-cyan-500 via-violet-900 to-violet-900 py-2 xs:overflow-auto ">
+        <ul className="flex flex-row gap-6 text-xl ">
+         <img src={Linclon} alt="" className="rounded-full block xs:w-[100px] md:w-[150px] animate-pulse" height="50px"></img>
           {/* <span className="ml-2"></span> */}
           {navigation.map(([path, name]) => {
             return (
-              <li className="dark:hover:text-slate-900 dark:text-white px-3 py-1 mx-auto  hover:rounded-[.2em] ">
+              <li className="dark:hover:text-slate-900 px-3 py-1 mx-auto  hover:rounded-[.2em] ">
                 <Link to={path}>{name}</Link>
               </li>
             );
@@ -103,8 +103,8 @@ import Linclon from "../assets/images/Capture.JPG";
               placeholder="Search..."
             />
           </article>
-          <li className=" dark:hover:text-slate-900 dark:text-white mx-auto py-1 hover:rounded-[.2em] ">
-            <button onClick={isSignInModal} className="font-bold">SignIn</button>
+          <li className=" dark:hover:text-slate-900 mx-auto py-1 hover:rounded-[.2em] ">
+            <button onClick={isSignInModal}>SignIn</button>
           </li>
           <article onClick={themeChange} className="cursor-pointer shrink-0 mx-auto">
             <img
@@ -115,7 +115,7 @@ import Linclon from "../assets/images/Capture.JPG";
               className="animate-bounce"
             />
           </article>
-          <li className=" dark:hover:text-[rgb(10,11,12)] dark:text-white py-1 pr-5 mx-auto hover:rounded-[.2em] ">
+          <li className=" dark:hover:text-[rgb(10,11,12)] py-1 pr-5 mx-auto hover:rounded-[.2em] ">
             <Link to="/profile">Profile</Link>
           </li>
         </ul>
