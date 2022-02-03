@@ -18,18 +18,16 @@ import Linclon from "../assets/images/Capture.JPG";
         setThemeIcon(false);
         document.documentElement.classList.remove("dark");
         document.body.style.backgroundImage = "linear-gradient(rgb(192,192,192),rgb(192,192,192))";
-        //"linear-gradient(rgb(254, 255, 213),rgb(195,195,195))";
       }
       else
       { setThemeIcon(true);
       document.documentElement.classList.add("dark");
-      document.body.style.backgroundImage = "conic-gradient(black, grey,rgb(50,50,50) )";
-      //"linear-gradient(rgb(20,20,20),rgb(100,100,100))";
+      document.body.style.backgroundImage = "linear-gradient(rgb(0,0,0),rgb(20,20,20))";
       }
   };
 
   const navigation = [
-    ["/home", "Home"],
+    ["/", "Home"],
     ["/about", "About"],
     ["/projects","Projects"]
   ];
@@ -83,30 +81,30 @@ import Linclon from "../assets/images/Capture.JPG";
       </div>
      {/*Modal end */}
 
-      <nav className="rounded-full bg-gradient-to-r from-cyan-500 to-violet-700 py-2 xs:overflow-auto ">
-        <ul className="flex flex-row font-bold gap-6 text-xl ">
-      <img src={Linclon} alt="" className="rounded-full block xs:w-[100px] md:w-[150px] animate-pulse" height="50px"></img>
+      <nav id="navTop" className="text-white rounded-full bg-gradient-to-r from-cyan-500 via-violet-900 to-violet-900 py-2 xs:overflow-auto ">
+        <ul className="flex flex-row gap-6 text-xl ">
+         <img src={Linclon} alt="" className="rounded-full block xs:w-[100px] md:w-[150px] animate-pulse" height="50px"></img>
           {/* <span className="ml-2"></span> */}
           {navigation.map(([path, name]) => {
             return (
-              <li className="dark:hover:text-slate-900 dark:text-white px-3 py-1 mx-auto  hover:rounded-[.2em] ">
+              <li className="dark:hover:text-slate-900 px-3 py-1">
                 <Link to={path}>{name}</Link>
               </li>
             );
           })}
           <section className="grow-[2] shrink"></section>
-          <article className="flex animate-pulse grow rounded-full mx-auto min-w-[4rem] bg-white px-1 border-2 border-slate-400">
+          <article className="flex animate-pulse grow rounded-full min-w-[4rem] bg-white px-1 border-2 border-slate-400 text-black">
             <img src={search} width="25px" alt="" />
             <input
-              className=" grow placeholder:italic focus:outline-none rounded-full dark:bg-slate-300 pl-1 min-w-[2rem]"
+              className=" grow placeholder:italic focus:outline-none rounded-full pl-1 min-w-[2rem]"
               type="text"
               placeholder="Search..."
             />
           </article>
-          <li className=" dark:hover:text-slate-900 dark:text-white mx-auto py-1 hover:rounded-[.2em] ">
-            <button onClick={isSignInModal} className="font-bold">SignIn</button>
+          <li className=" py-1 px-2 rounded-[.2em] bg-[rgba(0,0,0,0.3)] text-[1rem]">
+            <button onClick={isSignInModal}>Login</button>
           </li>
-          <article onClick={themeChange} className="cursor-pointer shrink-0 mx-auto">
+          <article onClick={themeChange} className="cursor-pointer shrink-0">
             <img
               src={themeIcon?sun:moon}
               alt=""
@@ -115,7 +113,8 @@ import Linclon from "../assets/images/Capture.JPG";
               className="animate-bounce"
             />
           </article>
-          <li className=" dark:hover:text-[rgb(10,11,12)] dark:text-white py-1 pr-5 mx-auto hover:rounded-[.2em] ">
+          <li className=" dark:hover:text-[rgb(10,11,12)] py-1 pr-5">
+
             <Link to="/profile">Profile</Link>
           </li>
         </ul>

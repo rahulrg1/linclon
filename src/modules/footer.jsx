@@ -10,7 +10,7 @@ const Footer = () => {
   ];
   return (
     <>
-      <footer  className="h-[100%] w-[100%] text-white bg-zinc-700 font-bold">
+      <footer  className="h-[100%] w-[100%] text-white bg-gray-800 font-bold">
         <ul className="flex flex-col items-center">
           {
             navigationFooter.map(([path,name])=>{
