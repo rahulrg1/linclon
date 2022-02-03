@@ -82,7 +82,6 @@ return <>
         <a href="#navTop">Back to Top</a>
       </article>
     </div>
-    
     <Footer/>
   </>
 }

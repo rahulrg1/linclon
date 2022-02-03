@@ -40,6 +40,7 @@ const Profile = () => {
           <label>Location</label>
           <br />
           <input placeholder="country,state,city" className="bg-neutral-200 my-2 md:min-w-[100%] rounded-[.25rem] px-3"/>
+
           <br />
         </form>
       </div>

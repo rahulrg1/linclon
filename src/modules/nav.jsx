@@ -114,6 +114,7 @@ import Linclon from "../assets/images/Capture.JPG";
             />
           </article>
           <li className=" dark:hover:text-[rgb(10,11,12)] py-1 pr-5">
+
             <Link to="/profile">Profile</Link>
           </li>
         </ul>
